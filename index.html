@@ -57,7 +57,7 @@ function touchMoved() {
 	
 
   // change oscillator frequency based on mouseX
-  var freq = map(m, 0, 100, 40, 880);
+  var freq = map(mouseX, 0, 100, 40, 880);
   osc.freq(freq);
 
    amp = map(m, 0, height, 1, .01);
