@@ -55,13 +55,14 @@ function touchMoved() {
   osc.freq(freq);
 
   var amp = map(mouseY, 0, height, 1, .01);
-
-	
+	osc.amp(amp);
+	return false;
 }
 function touchEnded(){
 
-	 osc.stop();
-		return false;
+	  var amp = 0;
+	osc.amp(amp);
+		
 
 }
 	  
