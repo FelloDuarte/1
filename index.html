@@ -31,7 +31,7 @@ function touchMoved() {
 
 	stroke(100+mouseX*155/displayWidth,mouseY,55+mouseY*200/displayHeight);
 	line(displayWidth-mouseX, displayHeight-mouseY, displayWidth-pmouseX, displayHeight-pmouseY,60);
-	
+	return false;
 	/*
 	
 	stroke(55+mouseY*200/displayHeight,100+mouseX*155/displayWidth,mouseY);
@@ -55,7 +55,7 @@ function touchMoved() {
   var amp = map(mouseY, 0, height, 1, .01);
   osc.amp(amp);
 	
-	return false;
+	
 }</script>
   </body>
 </html>
