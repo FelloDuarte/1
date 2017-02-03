@@ -57,11 +57,12 @@ function touchMoved() {
   var amp = map(mouseY, 0, height, 1, .01);
   osc.amp(amp);
 	
-	return false;
 }
 function touchEnded(){
 
 	 osc.stop();
+		return false;
+
 }
 	  
 	  </script>
