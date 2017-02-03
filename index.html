@@ -10,11 +10,13 @@
     <script>
  function setup() {
  	createCanvas(displayWidth, displayHeight);
-	strokeWeight(mouseY)
-	stroke(0);
+	
+	
 }
 
 function touchMoved() {
+	strokeWeight(mouseY)
+	stroke(mouseX);
 	line(mouseX, mouseY, pmouseX, pmouseY);
 	return false;
 }</script>
