@@ -36,11 +36,11 @@ function touchMoved() {
 
 	
 	
-	var m=((mouseX-pmouseX)+(mouseY-pmouseY))*5;
+	var m=((mouseX-pmouseX)+(mouseY-pmouseY))*2;
 	//background(255);
 	strokeWeight(m);
 	stroke(mouseX,55+mouseY*200/displayHeight,100+mouseX*155/displayWidth,60);
-	line(mouseX+plus, mouseY+plus, pmouseX, pmouseY);
+	line(mouseX+plus, mouseY+plus, pmouseX+plus, pmouseY+plus);
 	
 
 	stroke(100+mouseX*155/displayWidth,mouseY,55+mouseY*200/displayHeight);
@@ -57,7 +57,7 @@ function touchMoved() {
 	
 
   // change oscillator frequency based on mouseX
-  var freq = map(m, 0, width, 40, 880);
+  var freq = map(m, 0, 100, 40, 880);
   osc.freq(freq);
 
    amp = map(m, 0, height, 1, .01);
