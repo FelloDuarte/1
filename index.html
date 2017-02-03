@@ -8,21 +8,10 @@
     
     
     <script>
-function hideAddressBar() {
-  if(!window.location.hash) {
-    if(document.height < window.outerHeight)
-      document.body.style.height = (window.outerHeight + 50) + 'px';
-    setTimeout( function(){ 
-        window.scrollTo(0, 1); 
-        document.body.style.height = 'auto'; 
-      }, 50 );
-  }
-}
 	    
  function setup() {
  	createCanvas(displayWidth, displayHeight);
-	
-	
+
 }
 
 function touchMoved() {
@@ -39,7 +28,7 @@ function touchMoved() {
 	line(displayWidth-mouseX, mouseY, displayWidth-pmouseX, pmouseY);
 	
 		
-	stroke(55+mouseX*200/displayWidth,20+mouseY,100+mouseY*155/displayHeight);
+	stroke(55+mouseX*200/displayWidth,mouseX,100+mouseY*155/displayHeight);
 	line(mouseX, displayHeight-mouseY, pmouseX, displayHeight-pmouseY);
 	
 	return false;
