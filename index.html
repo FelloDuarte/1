@@ -15,7 +15,7 @@
 }
 
 function touchMoved() {
-	strokeWeight(mouseY-pmouseY);
+	strokeWeight(mouseY-20);
 	stroke(mouseX,55+mouseY*200/displayHeight,100+mouseX*155/displayWidth);
 	line(mouseX, mouseY, pmouseX, pmouseY);
 	return false;
