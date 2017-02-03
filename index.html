@@ -60,8 +60,9 @@ function touchMoved() {
 }
 function touchEnded(){
 
-	   amp = 0;
-	osc.amp(amp);
+	 ellipse(mouseX, mouseY, 5, 5);
+  // prevent default
+  return false;
 		
 
 }
