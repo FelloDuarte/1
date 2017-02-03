@@ -11,7 +11,7 @@
     
 <script>
 	    
-var osc, fft, m, amp;
+var osc, fft, m, amp,x,y;
 
 
  function setup() {
@@ -29,9 +29,9 @@ function touchMoved() {
 	var waveform = fft.waveform();  // analyze the waveform
  
   for (var i = 0; i < waveform.length; i++){
-    var x = map(i, 0, waveform.length, 0, width);
-    var y = map(waveform[i], -1, 1, height, 0);
-    
+     x = map(i, 0, waveform.length, 0, width);
+     y = map(waveform[i], -1, 1, height, 0);
+    }
   
 
 	
@@ -54,7 +54,7 @@ function touchMoved() {
 		
 	stroke(55+mouseX*200/displayWidth,mouseX,100+mouseY*155/displayHeight);
 	line(mouseX, displayHeight-mouseY, pmouseX, displayHeight-pmouseY);
-	}
+	
 
   // change oscillator frequency based on mouseX
   var freq = map(m, 0, width, 40, 880);
