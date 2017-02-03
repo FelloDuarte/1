@@ -15,7 +15,7 @@
 }
 
 function touchMoved() {
-	strokeWeight(((mouseX-pmouseX)+(mouseY-pmouseY)));
+	strokeWeight(((mouseX-pmouseX)+(mouseY-pmouseY))*10);
 	stroke(mouseX,55+mouseY*200/displayHeight,100+mouseX*155/displayWidth);
 	line(mouseX, mouseY, pmouseX, pmouseY);
 	
@@ -24,8 +24,12 @@ function touchMoved() {
 	line(displayWidth-mouseX, displayHeight-mouseY, displayWidth-pmouseX, displayHeight-pmouseY);
 	
 	
+	stroke(55+mouseY*200/displayHeight,100+mouseX*155/displayWidth,mouseY);
+	line(displayWidth-mouseX, mouseY, displayWidth-pmouseX, pmouseY);
+	
+		
 	stroke(100+mouseX*155/displayWidth,mouseY,55+mouseY*200/displayHeight);
-	line(displayWidth-mouseX, displayHeight-mouseY, displayWidth-pmouseX, displayHeight-pmouseY);
+	line(mouseX, displayHeight-mouseY, pmouseX, displayHeight-pmouseY);
 	
 	return false;
 }</script>
