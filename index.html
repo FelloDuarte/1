@@ -56,13 +56,13 @@ function touchMoved() {
 
   var amp = map(mouseY, 0, height, 1, .01);
   osc.amp(amp);
-	
+	return false;
 	
 }
 function  touchEnded(){
 	  var waveform = fft.waveform();  // analyze the waveform
-	osc.amp(0);
-	return false;
+	osc.amp(0.5);
+	
 
 }
 	  
