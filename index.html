@@ -11,7 +11,7 @@
     
 <script>
 	    
-var osc, fft, m, amp,x,y;
+var osc, fft, m, amp, plus;
 
 
  function setup() {
@@ -26,11 +26,11 @@ createCanvas(displayWidth, displayHeight);
 
 function touchMoved() {
 	
-	var waveform = fft.waveform();  // analyze the waveform
+	 waveform = fft.waveform();  // analyze the waveform
  
   for (var i = 0; i < waveform.length; i++){
-     x = map(i, 0, waveform.length, 0, width/10);
-     y = map(waveform[i], -1, 1, height/10, 0);
+     
+     plus = waveform[i];
     }
   
 
@@ -40,7 +40,7 @@ function touchMoved() {
 	background(255);
 	strokeWeight(m);
 	stroke(mouseX,55+mouseY*200/displayHeight,100+mouseX*155/displayWidth,60);
-	line(mouseX+waveform, mouseY+waveform, pmouseX, pmouseY);
+	line(mouseX+plus, mouseY+plus, pmouseX, pmouseY);
 	
 
 	stroke(100+mouseX*155/displayWidth,mouseY,55+mouseY*200/displayHeight);
