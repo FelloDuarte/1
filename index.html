@@ -44,7 +44,8 @@ function touchMoved() {
 	stroke(55+mouseX*200/displayWidth,mouseX,100+mouseY*155/displayHeight);
 	line(mouseX, displayHeight-mouseY, pmouseX, displayHeight-pmouseY);
 	
-	
+		return false;
+
 	
  
   var waveform = fft.waveform();  // analyze the waveform
@@ -60,10 +61,8 @@ function touchMoved() {
 	
 }
 function touchEnded(){
-
+var waveform = fft.waveform();
 	osc.amp(0.5);
-	return false;
-return false;
 }
 	  
 	  </script>
